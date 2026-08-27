@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💙 برای زهرای عزیزم 💙</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cfe8f5 0%, #e8f4f8 25%, #d4f1e8 50%, #e8f4f8 75%, #cfe8f5 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* حباب‌های شناور پس‌زمینه */
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), rgba(168,216,234,0.3));
+    box-shadow: 0 8px 32px rgba(168,216,234,0.3);
+    animation: float 20s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    33% { transform: translateY(-30px) translateX(20px) rotate(120deg); }
+    66% { transform: translateY(20px) translateX(-20px) rotate(240deg); }
+  }
+
+  /* قلب‌های شناور */
+  .heart {
+    position: absolute;
+    color: #a8d8ea;
+    font-size: 24px;
+    animation: heartFloat 10s linear infinite;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  @keyframes heartFloat {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+  }
+
+  /* کارت اصلی */
+  .card {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 520px;
+    width: 90%;
+    box-shadow: 
+      0 20px 60px rgba(168, 216, 234, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    text-align: center;
+    animation: cardAppear 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes cardAppear {
+    from { opacity: 0; transform: translateY(30px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c5f7c;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .zahra-name {
+    display: inline-block;
+    background: linear-gradient(135deg, #5ba3c9, #7bc4a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 20px;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+  }
+
+  .question {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c5f7c;
+    margin: 30px 0 40px;
+    line-height: 1.6;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.6s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    min-height: 70px;
+  }
+
+  .btn {
+    border: none;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-yes {
+    background: linear-gradient(135deg, #5ba3c9, #7bc4a8);
+    color: white;
+    box-shadow: 0 8px 25px rgba(91, 163, 201, 0.4);
+  }
+
+  .btn-yes:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(91, 163, 201, 0.6);
+  }
+
+  .btn-no {
+    background: rgba(255, 255, 255, 0.7);
+    color: #7a8a99;
+    border: 2px solid rgba(168, 216, 234, 0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  .btn-no:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* صفحه پایانی */
+  .final-screen {
+    display: none;
+    text-align: center;
+    animation: cardAppear 1s ease;
+  }
+
+  .final-text {
+    font-size: 32px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #5ba3c9, #7bc4a8, #5ba3c9);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    animation: textGlow 3s ease-in-out infinite, gradientMove 4s ease infinite;
+  }
+
+  @keyframes textGlow {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(91,163,201,0.3)); }
+    50% { filter: drop-shadow(0 0 25px rgba(123,196,168,0.6)); }
+  }
+
+  @keyframes gradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* گربه CSS */
+  .cat-container {
+    margin: 20px auto;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    animation: catBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes catBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .cat-body {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 100px;
+    background: linear-gradient(135deg, #ffffff, #e8f4f8);
+    border-radius: 50% 50% 45% 45%;
+    box-shadow: 0 10px 30px rgba(91, 163, 201, 0.3);
+  }
+
+  .cat-head {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 95px;
+    background: linear-gradient(135deg, #ffffff, #e8f4f8);
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: 0 5px 20px rgba(91, 163, 201, 0.2);
+  }
+
+  .ear {
+    position: absolute;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 30px solid #ffffff;
+  }
+
+  .ear-left { left: 10px; transform: rotate(-15deg); }
+  .ear-right { right: 10px; transform: rotate(15deg); }
+
+  .ear-inner {
+    position: absolute;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid #f5c6d6;
+  }
+
+  .ear-inner-left { left: 18px; transform: rotate(-15deg); }
+  .ear-inner-right { right: 18px; transform: rotate(15deg); }
+
+  .eye {
+    position: absolute;
+    top: 35px;
+    width: 18px;
+    height: 22px;
+    background: #2c5f7c;
+    border-radius: 50%;
+    animation: blink 4s infinite;
+  }
+
+  .eye::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  .eye-left { left: 22px; }
+  .eye-right { right: 22px; }
+
+  @keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+  }
+
+  .nose {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 8px;
+    background: #f5c6d6;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+
+  .mouth {
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    border: 2px solid #2c5f7c;
+    border-top: none;
+    border-radius: 0 0 30px 30px;
+    border-bottom-width: 2px;
+  }
+
+  .cheek {
+    position: absolute;
+    top: 60px;
+    width: 15px;
+    height: 10px;
+    background: rgba(245, 198, 214, 0.5);
+    border-radius: 50%;
+  }
+
+  .cheek-left { left: 10px; }
+  .cheek-right { right: 10px; }
+
+  .heart-bubble {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 30px;
+    animation: heartPop 2s ease-in-out infinite;
+  }
+
+  @keyframes heartPop {
+    0%, 100% { transform: scale(1) rotate(-10deg); opacity: 1; }
+    50% { transform: scale(1.3) rotate(10deg); opacity: 0.8; }
+  }
+
+  /* confetti */
+  .confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    animation: confettiFall linear forwards;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  @keyframes confettiFall {
+    to {
+      transform: translateY(110vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  .progress-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(168, 216, 234, 0.4);
+    transition: all 0.4s ease;
+  }
+
+  .dot.active {
+    background: linear-gradient(135deg, #5ba3c9, #7bc4a8);
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(91, 163, 201, 0.5);
+  }
+
+  .signature {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #7a8a99;
+    font-style: italic;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 35px 25px; }
+    .question { font-size: 22px; }
+    .final-text { font-size: 24px; }
+    .btn { padding: 14px 28px; font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card" id="mainCard">
+  <div class="progress-dots" id="progressDots"></div>
+  <div class="title">💙 برای </div>
+  <div class="zahra-name">زهرای عزیزم 💙</div>
+  <div class="question" id="questionText"></div>
+  <div class="buttons">
+    <button class="btn btn-yes" id="yesBtn" onclick="answerYes()">آره 💙</button>
+    <button class="btn btn-no" id="noBtn" onclick="answerNo()">نه</button>
+  </div>
+  <div class="signature">با عشق، برای تو ✨</div>
+</div>
+
+<div class="card final-screen" id="finalScreen">
+  <div class="cat-container">
+    <div class="heart-bubble">💙</div>
+    <div class="cat-head">
+      <div class="ear ear-left"></div>
+      <div class="ear ear-right"></div>
+      <div class="ear-inner ear-inner-left"></div>
+      <div class="ear-inner ear-inner-right"></div>
+      <div class="eye eye-left"></div>
+      <div class="eye eye-right"></div>
+      <div class="cheek cheek-left"></div>
+      <div class="cheek cheek-right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="cat-body"></div>
+  </div>
+  <div class="final-text">
+    من بی‌نهایتتتتتت<br>
+    و فراتر از آن<br>
+    دوستتتت دارممم 💙💚
+  </div>
+  <div class="signature">همیشه مال تو ✨</div>
+</div>
+
+<script>
+  const questions = [
+    "می‌دونی چقدر دوستت دارم؟ 💙",
+    "می‌دونی تو همه‌ی کس منی؟ 💚",
+    "می‌دونی تو چیزِ منی؟ 💙",
+    "تو هم منو دوست داری؟ 💚💙"
+  ];
+
+  let currentQuestion = 0;
+  let noCount = 0;
+
+  const questionText = document.getElementById('questionText');
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+  const progressDots = document.getElementById('progressDots');
+
+  // ساخت نقاط پیشرفت
+  questions.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    if (i === 0) dot.classList.add('active');
+    progressDots.appendChild(dot);
+  });
+
+  function showQuestion() {
+    questionText.style.animation = 'none';
+    void questionText.offsetWidth;
+    questionText.style.animation = 'fadeIn 0.6s ease';
+    questionText.textContent = questions[currentQuestion];
+    updateDots();
+    resetButtons();
+  }
+
+  function updateDots() {
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentQuestion);
+    });
+  }
+
+  function resetButtons() {
+    noCount = 0;
+    yesBtn.style.transform = 'scale(1)';
+    yesBtn.style.padding = '16px 36px';
+    yesBtn.style.fontSize = '18px';
+    noBtn.style.transform = 'scale(1)';
+    noBtn.style.padding = '16px 36px';
+    noBtn.style.fontSize = '18px';
+    noBtn.style.opacity = '1';
+  }
+
+  function answerYes() {
+    // انیمیشن قلب
+    createHearts(8);
+    
+    currentQuestion++;
+    if (currentQuestion >= questions.length) {
+      showFinalScreen();
+    } else {
+      showQuestion();
+    }
+  }
+
+  function answerNo() {
+    noCount++;
+    
+    // دکمه نه کوچک‌تر
+    const noScale = Math.max(0.3, 1 - (noCount * 0.15));
+    noBtn.style.transform = `scale(${noScale})`;
+    noBtn.style.fontSize = `${Math.max(12, 18 - noCount * 1.5)}px`;
+    noBtn.style.opacity = `${Math.max(0.4, 1 - noCount * 0.1)}`;
+    
+    // دکمه آره بزرگ‌تر
+    const yesScale = 1 + (noCount * 0.15);
+    yesBtn.style.transform = `scale(${yesScale})`;
+    yesBtn.style.fontSize = `${18 + noCount * 1.5}px`;
+    yesBtn.style.padding = `${16 + noCount * 3}px ${36 + noCount * 5}px`;
+    
+    // لرزش کارت
+    const card = document.getElementById('mainCard');
+    card.style.animation = 'none';
+    void card.offsetWidth;
+    card.style.animation = 'shake 0.4s ease';
+  }
+
+  // انیمیشن لرزش
+  const shakeStyle = document.createElement('style');
+  shakeStyle.textContent = `
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-8px); }
+      75% { transform: translateX(8px); }
+    }
+  `;
+  document.head.appendChild(shakeStyle);
+
+  function showFinalScreen() {
+    document.getElementById('mainCard').style.display = 'none';
+    const final = document.getElementById('finalScreen');
+    final.style.display = 'block';
+    final.style.animation = 'cardAppear 1s ease';
+    launchConfetti();
+    createHearts(20);
+  }
+
+  function createHearts(count) {
+    for (let i = 0; i < count; i++) {
+      setTimeout(() => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.textContent = Math.random() > 0.5 ? '💙' : '💚';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+        heart.style.animationDuration = (6 + Math.random() * 6) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 12000);
+      }, i * 150);
+    }
+  }
+
+  function launchConfetti() {
+    const colors = ['#5ba3c9', '#7bc4a8', '#a8d8ea', '#ffffff', '#b8e0d2'];
+    for (let i = 0; i < 80; i++) {
+      setTimeout(() => {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = (3 + Math.random() * 3) + 's';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        confetti.style.width = (6 + Math.random() * 8) + 'px';
+        confetti.style.height = (6 + Math.random() * 8) + 'px';
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 7000);
+      }, i * 50);
+    }
+  }
+
+  // ساخت حباب‌های پس‌زمینه
+  function createBubbles() {
+    for (let i = 0; i < 8; i++) {
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      const size = 50 + Math.random() * 150;
+      bubble.style.width = size + 'px';
+      bubble.style.height = size + 'px';
+      bubble.style.left = Math.random() * 100 + 'vw';
+      bubble.style.top = Math.random() * 100 + 'vh';
+      bubble.style.animationDuration = (15 + Math.random() * 15) + 's';
+      bubble.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(bubble);
+    }
+  }
+
+  // شروع
+  createBubbles();
+  showQuestion();
+  
+  // قلب‌های پس‌زمینه مداوم
+  setInterval(() => {
+    if (Math.random() > 0.5) createHearts(1);
+  }, 2000);
+</script>
+
+</body>
+  </html>
